@@ -4,7 +4,8 @@
 \usepackage{tikz}
 \usepackage{amsmath}
 \usepackage{graphicx}
-
+\usepackage[a4paper, margin=3.5cm]{geometry}
+\renewcommand{\baselinestretch}{1.5} 
 \begin{document}
 \title{写给初中生的广义相对论入门}
 \author{近代物理社}
@@ -37,13 +38,13 @@
 
 1.先给出微分流形集合上所有可能的到实数的映射，在地图上这显示为多元函数，因此，我们把流形上的点的信息转换为了流形上函数的信息。
 
-2.我们在给定点附近十分临近选一个点，将这两点函数值相减并乘上一个固定的大数，当我们把点越选越近时，我们包含临近两点的对象变成了求导算符。
+2.我们在给定点附近十分临近选一个点，将这两点函数值相减并乘上一个固定的大数，当我们把点越选越近并把乘上的数相应变大时，我们包含临近两点的对象变成了求导算符。
 
 3.不难验证一点上的求导算符（我们省去求和号对重复的指标 $ 0 \sim 3 $求和$A=a^\mu \frac{\partial}{\partial x^\mu }$，其中$\frac{\partial}{\partial x^\mu }$作为基底是沿坐标的求导算符）构成线性空间，称为切空间，其中元素称为该点的矢量。
 
 4.事实上，我们是反过来构造矢量的，先要求一类从函数到实数的映射算符满足线性性质，并且满足小量部分对正常量没有影响（体现为莱布尼茨律，详见梁书），从而得到矢量这种对象。
 
-由初中所学的勾股定理$r^2=x^2=y^2=z^2$可以推想，我们需要一个由矢量到实数的双线性映射$|A|^2=g(A,A)=g(a^\mu \frac{\partial}{\partial x^\mu },a^\nu \frac{\partial}{\partial x^\nu })=g( \frac{\partial}{\partial x^\mu }, \frac{\partial}{\partial x^\nu})a^\mu a^\nu=g_{\mu \nu }a^\mu a^\nu $。
+由初中所学的勾股定理$r^2=x^2+y^2+z^2$可以推想，我们需要一个由矢量到实数的双线性映射$|A|^2=g(A,A)=g(a^\mu \frac{\partial}{\partial x^\mu },a^\nu \frac{\partial}{\partial x^\nu })=g( \frac{\partial}{\partial x^\mu }, \frac{\partial}{\partial x^\nu})a^\mu a^\nu=g_{\mu \nu }a^\mu a^\nu $，称为度规映射。
 
 一般地，这样的线性映射可以由矢量到实数的线性映射构造出来，过程如下：
 
@@ -59,5 +60,5 @@
 
 直观上，可以将矢量想象成箭头，对偶矢量想象成地图上的斜坡等高线用来测度矢量。有趣的是，函数自然诱导出对偶矢量，我们以函数值作为直观等高线的数值。这样，其量矢量得出的实数就是很近函数值的差乘一个固定的大数，即函数导数。将对偶矢量作用于矢量基底上得出$df=\frac{\partial f}{\partial x^\mu }dx^\mu $。这正是多元微积分中的全微分！
 
-2.我们构造
+2.我们构造如同度规映射那样由矢量对偶矢量到实数的映射称为张量$G(\cdot,\dots;\cdot,\dots)$
 \end{document}
