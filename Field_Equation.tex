@@ -33,10 +33,9 @@
 \subsubsection{牛顿引力下潮汐力的几何特征}
 
 想象一下，假设最初的粒子球体被封闭在一个立方体中。当球体下落并变形为椭球时，封闭的立方体及其内容物会发生线性变换，将其变形为一个边长为 $2\xi, 2\zeta$ 和 $2\Xi$ 的盒子，因此体积为 $8\xi\zeta\Xi$。注意到对于水平方向，$\xi$与$\zeta$的地位应当是等价的，且鸡蛋所占的体积是这个盒子的一个固定比例，我们有：
-
-\begin{equation*}
-\delta \mathcal{V} = \frac{4\pi}{3} \xi^2 \Xi
-\end{equation*}
+\begin{equation}
+\delta \mathcal{V} = \frac{4\pi}{3} \xi^2 \Xi\label{1.1.1.1}
+\end{equation}
 
 由于你和粒子球从静止开始，显然这个体积的变化率最初为零：$\delta \dot{\mathcal{V}} = 0$。这可以通过计算来验证：
 \begin{align*}
@@ -60,6 +59,37 @@
     \ddot{\Xi} = -\mathcal{K}_- \Xi \quad \Rightarrow \quad \mathcal{K}_- = -\frac{2GM}{r^3}
 \end{gather*}
 
-由$\delta\ddot{\mathcal V}=\delta\dot{\mathcal V}=0$，我们可以得到美丽的平方反比潮汐力的几何特征：由平方反比定律产生的潮汐力、且只有平方反比定律是\textbf{保持体积}的.
+由$\delta\ddot{\mathcal V}=\delta\dot{\mathcal V}=0$，我们可以得到美丽的平方反比潮汐力的几何特征：由平方反比定律产生的潮汐力、且只有平方反比定律是\textbf{保持体积}的。
+
+\subsubsection{牛顿引力下吸引力的几何特征}
+
+在前面的分析中，我们暂时忽略了球壳内部粒子对彼此的引力影响。但实际上，如果你从球体中被移开，并将原本你所在位置填充为密度为 $\rho$ 的致密物质，它将对其余粒子产生新的引力源。
+
+假设粒子球半径为 $\xi = \Xi$，此时球体内的粒子将受到这块致密物质的吸引。等效地，可以认为中心存在一团质量为 $\rho \, \delta \mathcal{V}$ 的物质，产生引力使粒子向中心加速：
+\begin{equation*}
+\ddot{\xi} = -\frac{G \rho \, \delta \mathcal{V}}{\xi^2}
+\end{equation*}
+现在我们来计算这种情况下鸡蛋体积的加速度。根据\eqref{1.1.1.1}：
+\begin{equation*}
+\delta \mathcal{V} = \frac{4\pi}{3} \xi^3
+\end{equation*}
+我们对其进行两次时间导数，有：
+\begin{align*}
+\dot{\delta \mathcal{V}} &= 4\pi \xi^2 \dot{\xi} \\
+\ddot{\delta \mathcal{V}} &= 8\pi \xi \dot{\xi}^2 + 4\pi \xi^2 \ddot{\xi}
+\end{align*}
+
+由于初始时 $\dot{\xi} = 0$，上式简化为：
+
+\begin{equation*}
+\ddot{\delta \mathcal{V}} = 4\pi \xi^2 \ddot{\xi} = 4\pi \xi^2 \left( -\frac{G \rho \, \delta \mathcal{V}}{\xi^2} \right) = -4\pi G \rho \, \delta \mathcal{V}
+\end{equation*}
+
+因此我们得到了一个非常优雅的结论：
+\begin{equation}
+    \ddot{\delta \mathcal{V}} = -4\pi G \rho \, \delta \mathcal{V}
+\end{equation}
+即：对于一个填充了密度为 $\rho$ 物质的球体而言，其体积的加速度正比于它本身，且符号为负，表示球体会向内坍缩。这种行为是平方反比引力的直接体现，体现了其稳定、集中的吸引性质。
+
 
 \end{document}
