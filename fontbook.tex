@@ -1,5 +1,6 @@
 \documentclass{article}
 \usepackage[fontset=none]{ctex}
+
 \setCJKmainfont{FZShuSong-Z01}[BoldFont={Source Han Serif SC SemiBold}, ItalicFont=FZKai-Z03]
 \setCJKsansfont{FZHei-B01}[BoldFont={Source Han Serif SC Medium}]
 \setCJKmonofont{FZFangSong-Z02}
@@ -18,11 +19,11 @@
   {\normalfont\fontsize{14}{17}\selectfont\dbsong} 
   {\thesection}{1em}{}
 \titleformat{\subsection}
-  {\normalfont\fontsize{12}{15}\selectfont\dbsong}
-  {\thesubsection}{1em}{}
+  {\normalfont\fontsize{12}{15}\selectfont\xbsong}
+  {\selectfont\dbsong\thesubsection}{1em}{}
 \titleformat{\subsubsection}
   {\normalfont\normalsize\selectfont\xbsong}
-  {\thesubsubsection}{1em}{}
+  {\selectfont\xbsong\thesubsubsection}{1em}{}
 
 \usepackage{bm}
 \usepackage{tikz}
