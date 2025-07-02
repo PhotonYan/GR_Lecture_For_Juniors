@@ -1,0 +1,50 @@
+\documentclass{article}
+\usepackage[fontset=none]{ctex}
+\setCJKmainfont{FZShuSong-Z01}[BoldFont={Source Han Serif SC SemiBold}, ItalicFont=FZKai-Z03]
+\setCJKsansfont{FZHei-B01}[BoldFont={Source Han Serif SC Medium}]
+\setCJKmonofont{FZFangSong-Z02}
+\newCJKfontfamily\kaishu{FZKai-Z03}
+\newCJKfontfamily\songti{FZShuSong-Z01}[BoldFont={Source Han Serif SC SemiBold}]
+\newCJKfontfamily\xbsong{Source Han Serif SC SemiBold} 
+\newCJKfontfamily\dbsong{Source Han Serif SC Bold} 
+\newCJKfontfamily\cusong{Source Han Serif SC Heavy} 
+\newCJKfontfamily\heiti{FZHei-B01}[BoldFont={FZHei-B01}]
+\newCJKfontfamily\dahei{Source Han Serif SC Medium}
+\newCJKfontfamily\cuhei{Source Han Serif SC Bold}
+\newCJKfontfamily\fangsong{FZFangSong-Z02}[BoldFont={FZHei-B01}]
+\newCJKfontfamily\kaiti{FZKai-Z03}[BoldFont={FZHei-B01}]
+\usepackage{titlesec}
+\titleformat{\section}
+  {\normalfont\fontsize{14}{17}\selectfont\dbsong} 
+  {\thesection}{1em}{}
+\titleformat{\subsection}
+  {\normalfont\fontsize{12}{15}\selectfont\dbsong}
+  {\thesubsection}{1em}{}
+\titleformat{\subsubsection}
+  {\normalfont\normalsize\selectfont\xbsong}
+  {\thesubsubsection}{1em}{}
+
+\usepackage{bm}
+\usepackage{tikz}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage[a4paper, margin=3.5cm]{geometry}
+\renewcommand{\baselinestretch}{1.5} 
+\usepackage{subfiles}
+\title{\dbsong 写给初中生的广义相对论入门}
+\author{近代物理社}
+\begin{document}
+\maketitle
+本文参考书目：《微分几何入门与广义相对论》（梁灿彬）简称梁书。
+
+我们重新定义一种时间和距离的单位使得这一单位制下光速$c=1$。
+\vspace{1em}
+\tableofcontents
+\newpage
+
+\subfile{./chapters/general relativity math intro.tex}
+\subfile{./chapters/Field_Equation.tex}
+\subfile{./chapters/Schwarzschild.tex}
+\subfile{./chapters/Blackwhole.tex}
+\subfile{./chapters/Universe.tex}
+\end{document}
