@@ -1,1 +1,1 @@
-111
+This repo is built for the Modern Physics Club at Beijing No. 4 Middle School. It is written for junior middle school students with a basic knowledge of calculus.
