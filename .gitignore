@@ -1,0 +1,12 @@
+*.toc
+*.log
+*.aux
+*.synctex.gz
+.DS_Store
+*.nb
+.gitee
+.github
+.workflow
+*.fls
+font_book.tex
+*.csv
